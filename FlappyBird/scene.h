@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QGraphicsScene>
+#include "pillaritem.h"
+#include <QTimer>
 
 class Scene : public QGraphicsScene
 {
@@ -11,7 +13,9 @@ public:
     explicit Scene(QObject *parent = nullptr);
 
 signals:
-
+private:
+    void setUpPillarTimer();
+    QTimer * pillarTimer;
 };
 
 #endif // SCENE_H
